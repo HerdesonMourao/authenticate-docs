@@ -47,3 +47,7 @@ function validateCPF(cpf){
         }        
     }
 }
+
+module.exports = {
+    validateCPF
+}
