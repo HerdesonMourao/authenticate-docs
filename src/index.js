@@ -1,67 +1,49 @@
 function validateCPF(cpf){
     var validateFirstDigit;
     var validateSecondDigit;
-    var addDigits = 0;
+    var compareElement;
+    var amount = 0;
 
     /*
     * removendo máscara do cpf como pontos, traço e underline
-    * utilizamos regex para remover os sinais(. - _)  
-    */
+    * utilizando o regex fazer essa remoção  
+    */   
     cpf = cpf.replace(/\./g, '');
     cpf = cpf.replace(/\-/g, '');
     cpf = cpf.replace(/\_/g, '');
 
-    //verificando tamanho da informação enviada
+    // aqui e verificado se o cpf tem 11 caracteres e verifica se todos os caracteres são iguais
     if(cpf == '' || cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)){
         return false;
-    }
-}
-
-function validacaoCPF(numero_doc){
-    // proteção #1 -> verificando se todos os números são iguais, utilizando REGEX
-    // REGEX de validação /^(\d)\1{10}$/
-
-    if(numero_doc == '' || numero_doc.toString().length != 11 || /^(\d)\1{10}$/.test(numero_doc)){
-        return false;
     } else{
-        // proteção #2 -> validação do primeiro digito
-        
         for(let i = 1; i <= 9; i++){
-            soma += parseInt(numero_doc.substring(i - 1, i)) * (11 - i);
+            amount += parseInt(cpf.substring(i - 1, i)) * (11 - i);
         }
 
-        validacao_digito_1 = (soma * 10) % 11;
+        validateFirstDigit = (amount * 10) % 11;
 
-        // proteção #3 -> caso resultado seja 10 ou 11, informamos o valor 0
-        if((validacao_digito_1 == 10) || (validacao_digito_1 == 11)){
-            validacao_digito_1 = 0
-        }
+        // se for maior que 10 o digito verificador e 0
+        validateFirstDigit = validateFirstDigit >= 10 ? 0 : validateFirstDigit;
 
-        // verificando se a validação do digito 1 e true ou false
-        if(validacao_digito_1 != parseInt(numero_doc.substring(9, 10))){
+        // confirmar se o validateFirstDigit e igual ao 10° caractere do cpf
+        if(validateFirstDigit != parseInt(cpf.substring(9, 10))){
             return false;
         } else{
-            // proteção #4 -> validação do segundo digito
-            
-            soma = 0
+            amount = 0;
             
             for(let i = 1; i <= 10; i++){
-                soma += parseInt(numero_doc.substring(i - 1, i)) * (12 - i);
+                amount += parseInt(cpf.substring(i - 1, i)) * (12 - i);
             }
 
-            validacao_digito_2 = (soma * 10) % 11;
+            validateSecondDigit = (amount * 10) % 11;
 
-            // proteção #5 -> verificando se o resultado e igual a 10 ou 11, caso seja informamos o valor 0
-            if((validacao_digito_2 == 10) || (validacao_digito_2 == 11)){
-                validacao_digito_2 = 0
-            }
+            // se for maior que 10 o digito verificador e 0
+            validateSecondDigit = validateSecondDigit >= 10 ? 0 : validateSecondDigit;
 
-            //verificando se a validação do digito 2 e true ou false
-            if(validacao_digito_2 != parseInt(numero_doc.substring(10, 11))){
-                return false;
-            } else {
-                return true;
-            }
-        }
+            // confirmar se o validateFirstDigit e igual ao 11° caractere do cpf
+            compareElement = validateSecondDigit != parseInt(cpf.substring(10, 11)) ? false : true;
+
+            return compareElement;          
+        }        
     }
 }
