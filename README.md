@@ -34,6 +34,12 @@ Na função pode ser passado o cpf tanto como uma string, como um inteiro.
     //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
   ```
 
+  ```js
+    console.log(validateCPF('XXXXXXXXXXX'));
+    
+    //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
+  ```
+
 * Passando inteiro:
   ```js
     console.log(validateCPF(XXXXXXXXXXX));

@@ -4,6 +4,9 @@ function validateCPF(cpf){
     var compareElement;
     var amount = 0;
 
+    //convetendo o valor recebido para string
+    cpf = cpf.toString();
+
     /*
     * removendo máscara do cpf como pontos, traço e underline
     * utilizando o regex fazer essa remoção  
