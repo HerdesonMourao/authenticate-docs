@@ -4,6 +4,7 @@
   ![GitHub language count](https://img.shields.io/github/languages/count/HerdesonMourao/authenticate-docs)
   ![GitHub repo size](https://img.shields.io/github/repo-size/HerdesonMourao/authenticate-docs)
   ![GitHub issues](https://img.shields.io/github/issues/HerdesonMourao/authenticate-docs)
+  ![GitHub closed issues](https://img.shields.io/github/issues-closed/HerdesonMourao/authenticate-docs)
   ![GitHub pull requests](https://img.shields.io/github/issues-pr/HerdesonMourao/authenticate-docs)
   ![GitHub](https://img.shields.io/github/license/HerdesonMourao/authenticate-docs)
   ![GitHub last commit](https://img.shields.io/github/last-commit/HerdesonMourao/authenticate-docs)
