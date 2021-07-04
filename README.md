@@ -27,13 +27,14 @@ Para utilizar basta inserir o sequinte comando:
 
 Na função pode ser passado o cpf tanto como uma string, como um inteiro.
 
-* Passando string:
+* Passando string com máscara:
   ```js
     console.log(validateCPF('XXX.XXX.XXX-XX'));
     
     //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
   ```
 
+* Passando string sem máscara:
   ```js
     console.log(validateCPF('XXXXXXXXXXX'));
     
