@@ -1,6 +1,6 @@
 {
   "name": "authenticate-docs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Conjunto de Scripts para validação de documentos",
   "main": "src/index.js",
   "scripts": {
