@@ -16,7 +16,7 @@ Pacote de script para validação/autenticação de cpf e cnpj brasileiros.
 
 ### Instalação
 
-Para instalar o autenticador basta executar o campo `npm install authenticate-docs`
+Para instalar o autenticador basta executar em seu projeto o comando `npm install authenticate-docs`
 
 ### Utilizando o autenticador
 
