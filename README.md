@@ -12,7 +12,7 @@
 
 ### Descrição do projeto
 
-Pacote de script para validação/autenticação de cpf e cnpj brasileiros.
+Pacote de script para validação/autenticação de CPF e CNPJ brasileiros.
 
 ### Instalação
 
@@ -22,62 +22,69 @@ Para instalar o autenticador basta executar em seu projeto o comando `npm instal
 
 Para utilizar basta inserir o sequinte comando:
 
-  * #### CPF ####
-    ```js
-      const { validateCPF } = require('authenticate-docs');
-    ```
+- #### CPF
 
-    Na função pode ser passado o cpf tanto como uma string, como um inteiro.
+  ```js
+  const { validateCPF } = require("authenticate-docs");
+  ```
 
-    * Passando string com máscara:
-      ```js
-        console.log(validateCPF('XXX.XXX.XXX-XX'));
-    
-        //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
-      ```
+  Na função pode ser passado o CPF tanto como uma string, como um inteiro.
 
-    * Passando string sem máscara:
-      ```js
-        console.log(validateCPF('XXXXXXXXXXX'));
-    
-        //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
-      ```
-
-    * Passando inteiro:
-      ```js
-        console.log(validateCPF(XXXXXXXXXXX));
-    
-        //se for um cpf valido irá retornar TRUE caso contrário retorna FALSE
-      ```
-
-  * #### CNPJ ####
+  - Passando string com máscara:
 
     ```js
-    const { validateCNPJ } = require('authenticate-docs');
+    console.log(validateCPF("XXX.XXX.XXX-XX"));
+
+    //se for um CPF valido irá retornar TRUE caso contrário retorna FALSE
     ```
 
-    Na função pode ser passado o cnpj tanto como uma string, como um inteiro.
+  - Passando string sem máscara:
 
-    * Passando string com máscara:
-      ```js
-        console.log(validateCNPJ('XX.XXX.XXX/XXXX-XX'));
-    
-        //se for um cnpj valido irá retornar TRUE caso contrário retorna FALSE
-      ```
+    ```js
+    console.log(validateCPF("XXXXXXXXXXX"));
 
-    * Passando string sem máscara:
-      ```js
-        console.log(validateCNPJ('XXXXXXXXXXXXXX'));
-    
-        //se for um cnpj valido irá retornar TRUE caso contrário retorna FALSE
-      ```
+    //se for um CPF valido irá retornar TRUE caso contrário retorna FALSE
+    ```
 
-    * Passando inteiro:
-      ```js
-        console.log(validateCNPJ(XXXXXXXXXXXXXX));
-    
-        //se for um cnpj valido irá retornar TRUE caso contrário retorna FALSE
-      ```
+  - Passando inteiro:
+
+    ```js
+    console.log(validateCPF(XXXXXXXXXXX));
+
+    //se for um CPF valido irá retornar TRUE caso contrário retorna FALSE
+    ```
+
+- #### CNPJ
+
+  ```js
+  const { validateCNPJ } = require("authenticate-docs");
+  ```
+
+  Na função pode ser passado o CNPJ tanto como uma string, como um inteiro.
+
+  - Passando string com máscara:
+
+    ```js
+    console.log(validateCNPJ("XX.XXX.XXX/XXXX-XX"));
+
+    //se for um CNPJ valido irá retornar TRUE caso contrário retorna FALSE
+    ```
+
+  - Passando string sem máscara:
+
+    ```js
+    console.log(validateCNPJ("XXXXXXXXXXXXXX"));
+
+    //se for um CNPJ valido irá retornar TRUE caso contrário retorna FALSE
+    ```
+
+  - Passando inteiro:
+
+    ```js
+    console.log(validateCNPJ(XXXXXXXXXXXXXX));
+
+    //se for um CNPJ valido irá retornar TRUE caso contrário retorna FALSE
+    ```
 
 ### Autor
 
