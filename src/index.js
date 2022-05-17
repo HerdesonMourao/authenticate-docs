@@ -6,7 +6,7 @@ function validateCPF(cpf) {
    * removendo máscara do cpf como pontos, traço e underline
    * utilizando o regex fazer essa remoção
    */
-  cpf = cpf.replace(/[.-_]/g, "");
+  cpf = cpf.replace(/[.\-_]/g, "");
 
   // aqui e verificado se o cpf tem 11 caracteres e verifica se todos os caracteres são iguais
   if (cpf == "" || cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)) {
